@@ -1,0 +1,16 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+
+namespace DataAccess.Models
+{
+    public class Office 
+    {
+        [Key]
+        [ForeignKey("Teacher")]
+        public int TeacherID { get; set; }
+        public string Location { get; set; }
+
+        public virtual Teacher Teacher { get; set; }
+    }
+}
