@@ -1,0 +1,15 @@
+D:\MyWork\UniversityManagementSystem\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+D:\MyWork\UniversityManagementSystem\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.json
+D:\MyWork\UniversityManagementSystem\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.dev.json
+D:\MyWork\UniversityManagementSystem\DataAccess\bin\Debug\net5.0\DataAccess.dll
+D:\MyWork\UniversityManagementSystem\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+D:\MyWork\UniversityManagementSystem\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+D:\MyWork\UniversityManagementSystem\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+D:\MyWork\UniversityManagementSystem\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\UniversityManagementSystem\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+D:\MyWork\UniversityManagementSystem\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+D:\MyWork\UniversityManagementSystem\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\MyWork\UniversityManagementSystem\DataAccess\obj\Debug\net5.0\DataAccess.dll
+D:\MyWork\UniversityManagementSystem\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+D:\MyWork\UniversityManagementSystem\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+D:\MyWork\UniversityManagementSystem\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache

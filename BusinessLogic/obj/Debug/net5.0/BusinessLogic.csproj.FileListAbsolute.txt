@@ -1,0 +1,15 @@
+D:\MyWork\UniversityManagementSystem\BusinessLogic\bin\Debug\net5.0\BusinessLogic.deps.json
+D:\MyWork\UniversityManagementSystem\BusinessLogic\bin\Debug\net5.0\BusinessLogic.dll
+D:\MyWork\UniversityManagementSystem\BusinessLogic\bin\Debug\net5.0\ref\BusinessLogic.dll
+D:\MyWork\UniversityManagementSystem\BusinessLogic\bin\Debug\net5.0\BusinessLogic.pdb
+D:\MyWork\UniversityManagementSystem\BusinessLogic\bin\Debug\net5.0\DataAccess.dll
+D:\MyWork\UniversityManagementSystem\BusinessLogic\bin\Debug\net5.0\DataAccess.pdb
+D:\MyWork\UniversityManagementSystem\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj.AssemblyReference.cache
+D:\MyWork\UniversityManagementSystem\BusinessLogic\obj\Debug\net5.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyWork\UniversityManagementSystem\BusinessLogic\obj\Debug\net5.0\BusinessLogic.AssemblyInfoInputs.cache
+D:\MyWork\UniversityManagementSystem\BusinessLogic\obj\Debug\net5.0\BusinessLogic.AssemblyInfo.cs
+D:\MyWork\UniversityManagementSystem\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\MyWork\UniversityManagementSystem\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj.CopyComplete
+D:\MyWork\UniversityManagementSystem\BusinessLogic\obj\Debug\net5.0\BusinessLogic.dll
+D:\MyWork\UniversityManagementSystem\BusinessLogic\obj\Debug\net5.0\ref\BusinessLogic.dll
+D:\MyWork\UniversityManagementSystem\BusinessLogic\obj\Debug\net5.0\BusinessLogic.pdb
