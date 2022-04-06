@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using System.Text.Json.Serialization;
 
 namespace UniversityManagementSystem
 {
@@ -45,7 +45,8 @@ namespace UniversityManagementSystem
             services.AddScoped<IRepository<Office>, RepositoryOffice>();
             services.AddScoped<IOfficeService, OfficeService>();
 
-            services.AddControllers();
+            services.AddControllers().AddJsonOptions(x =>
+                                      x.JsonSerializerOptions.ReferenceHandler  = ReferenceHandler.Preserve);
             services.AddRazorPages();
         }
 
