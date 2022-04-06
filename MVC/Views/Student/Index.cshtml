@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MVC.Models.StudentView>
+
+@{
+    ViewBag.Title = "Students";
+ }
+
+<h1>Students</h1>
+<p>Create New</p>
+
+<table class="table table-striped">
+    <thead class="table-healing">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.EnrollmentDate)
+            </th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+        </tr>
+    }
+</table>
