@@ -30,7 +30,7 @@ namespace DataAccess.Repositories
             return true;
         }
 
-        public async Task<List<TEntity>> GetAllAsync()
+        public virtual async Task<List<TEntity>> GetAllAsync()
         {
             return await _context.Set<TEntity>().ToListAsync();
         }
