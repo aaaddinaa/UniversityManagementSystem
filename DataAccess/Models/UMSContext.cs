@@ -18,7 +18,6 @@ namespace DataAccess.Models
         public DbSet<Course> Courses { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
-        public DbSet<Department> Departments { get; set; }
         public DbSet<Office> Offices { get; set; }
         public DbSet<CourseTeacher> CourseTeachers { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
@@ -26,8 +25,11 @@ namespace DataAccess.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CourseTeacher>()
-                .HasKey(tc => new { tc.TeacherID, tc.CourseID });    
+                .HasKey(tc => new { tc.TeacherID, tc.CourseID });
 
+            modelBuilder.Entity<Teacher>()
+                .HasOne<Office>(o => o.Office).WithOne(t => t.Teacher)
+                .HasForeignKey<Office>(ot => ot.TeacherID);
         }
     }
 }

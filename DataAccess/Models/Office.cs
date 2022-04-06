@@ -4,9 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
-    public class Office 
+    public class Office : BaseEntity
     {
-        [Key]
         [ForeignKey("Teacher")]
         public int TeacherID { get; set; }
         public string Location { get; set; }

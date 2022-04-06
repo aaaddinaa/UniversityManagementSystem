@@ -4,14 +4,16 @@ using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(UMSContext))]
-    partial class UMSContextModelSnapshot : ModelSnapshot
+    [Migration("20220406062956_AddTeacherOfficeCourseTeacherTables")]
+    partial class AddTeacherOfficeCourseTeacherTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,21 +84,13 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("DataAccess.Models.Office", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                    b.Property<int>("TeacherID")
+                        .HasColumnType("int");
 
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TeacherID")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("TeacherID")
-                        .IsUnique();
+                    b.HasKey("TeacherID");
 
                     b.ToTable("Offices");
                 });
