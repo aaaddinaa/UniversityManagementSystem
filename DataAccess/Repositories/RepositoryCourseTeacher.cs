@@ -1,4 +1,7 @@
 ﻿using DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
 {
@@ -7,6 +10,12 @@ namespace DataAccess.Repositories
         public RepositoryCourseTeacher(UMSContext context) : base(context)
         {
 
+        }
+
+        public override async Task<List<CourseTeacher>> GetAllAsync()
+        {
+            return await _context.CourseTeachers.Include(c => c.Course)
+                                                .Include(t => t.Teacher).ToListAsync();
         }
     }
 }
