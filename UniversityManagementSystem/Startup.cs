@@ -36,6 +36,15 @@ namespace UniversityManagementSystem
             services.AddScoped<IRepository<Enrollment>, RepositoryEnrollment>();
             services.AddScoped<IEnrollmentService, EnrollmentService>();
 
+            services.AddScoped<IRepository<Teacher>, RepositoryTeacher>();
+            services.AddScoped<ITeacherService, TeacherService>();
+
+            services.AddScoped<IRepository<CourseTeacher>, RepositoryCourseTeacher>();
+            services.AddScoped<ICourseTeacherService, CourseTeacherService>();
+
+            services.AddScoped<IRepository<Office>, RepositoryOffice>();
+            services.AddScoped<IOfficeService, OfficeService>();
+
             services.AddControllers();
             services.AddRazorPages();
         }
