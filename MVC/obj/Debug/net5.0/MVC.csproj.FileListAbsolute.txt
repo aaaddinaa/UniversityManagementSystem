@@ -41,3 +41,4 @@ D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\MVC.dll
 D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\ref\MVC.dll
 D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\MVC.pdb
 D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\MVC.genruntimeconfig.cache
+D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\Razor\Views\Student\AddOrEdit.cshtml.g.cs

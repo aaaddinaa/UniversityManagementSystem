@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "MVC/1.0.0": {
         "dependencies": {
+          "AlertifyJS": "1.13.1",
           "Microsoft.AspNet.WebApi.Client": "5.0.0",
           "Newtonsoft.Json": "13.0.1",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -326,6 +327,7 @@
           "MVC.dll": {}
         }
       },
+      "AlertifyJS/1.13.1": {},
       "Microsoft.AspNet.WebApi.Client/5.0.0": {
         "runtime": {
           "lib/net45/System.Net.Http.Formatting.dll": {
@@ -2053,6 +2055,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AlertifyJS/1.13.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lJyjcEN++TZP+U1jpNSMEBCI53hsNvexvAEOwo2+W4BjRAq81ElX0cRCgbfHPMKGauvXVPvlo6aAio4tJumy7w==",
+      "path": "alertifyjs/1.13.1",
+      "hashPath": "alertifyjs.1.13.1.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.0.0": {
       "type": "package",
