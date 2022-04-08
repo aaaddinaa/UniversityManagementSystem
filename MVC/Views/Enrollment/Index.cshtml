@@ -36,7 +36,7 @@
 
             <th>
                 <a href="@Url.Action("AddOrEdit", "Enrollment", new {id =item.ID })" class="btn btn-default"><i class="fa fa-pencil"></i>Edit</a>
-                <a onclick="Delete(item.ID)" class="btn btn-default"><i class="fa fa-trash"></i>Delete</a>
+                <a onclick="Delete(@item.ID)" class="btn btn-default"><i class="fa fa-trash"></i>Delete</a>
             </th>
         </tr>
     }

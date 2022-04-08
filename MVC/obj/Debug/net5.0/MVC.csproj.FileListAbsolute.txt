@@ -48,3 +48,7 @@ D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\Razor\Views\Office\Ind
 D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\Razor\Views\Office\AddOrEdit.cshtml.g.cs
 D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\Razor\Views\Enrollment\Index.cshtml.g.cs
 D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\Razor\Views\Enrollment\AddOrEdit.cshtml.g.cs
+D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\Razor\Views\Course\Index.cshtml.g.cs
+D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\Razor\Views\Course\AddOrEdit.cshtml.g.cs
+D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\Razor\Views\CourseTeacher\AddOrEdit.cshtml.g.cs
+D:\MyWork\UniversityManagementSystem\MVC\obj\Debug\net5.0\Razor\Views\CourseTeacher\Index.cshtml.g.cs
