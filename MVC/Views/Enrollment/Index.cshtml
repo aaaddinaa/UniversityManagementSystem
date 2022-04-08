@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MVC.Models.EnrollmentView>
+
+@{ 
+    ViewBag.Title = "Entrolments";
+}
+<h1>Enrollments</h1>
+
+<p>
+    <a href="@Url.Action("AddOrEdit", "Enrollment")" class="btn btn-default"><i class="fa fa-plus"></i>Create new</a>
+</p>
+
+<table class="table table-striped">
+    <thead class="table-healing">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Student.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course.Title)
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(modelItem => item.Student.FullName)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.Course.Title)
+            </th>
+
+            <th>
+                <a href="@Url.Action("AddOrEdit", "Enrollment", new {id =item.ID })" class="btn btn-default"><i class="fa fa-pencil"></i>Edit</a>
+                <a onclick="Delete(item.ID)" class="btn btn-default"><i class="fa fa-trash"></i>Delete</a>
+            </th>
+        </tr>
+    }
+</table>
+
+@section scripts{ 
+    <script>
+        $(function () {
+            var succesMessage = '@TempData["SuccessMessage"]'
+            if (succesMessage != '') 
+                alertify.success(succesMessage)
+        });
+
+        function Delete(id) {
+            alertify.confirm('Delete this Enrollment', 'Are you sure?', function () {
+                window.location.href = '@Url.Action("Delete", "Enrollment")/' + id
+            }, null)
+        }
+    </script>
+}

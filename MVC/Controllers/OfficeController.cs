@@ -31,6 +31,7 @@ namespace MVC.Controllers
             }
         }
 
+        [HttpPost]
         public ActionResult AddOrEdit(OfficeView office)
         {
             if(office.ID == 0)

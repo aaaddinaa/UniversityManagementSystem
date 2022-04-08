@@ -9,6 +9,15 @@ namespace MVC.Models
         public string LastName { get; set; }
         public string FirstName { get; set; }
 
+        [Display(Name = "Full Name")]
+        public string FullName
+        {
+            get
+            {
+                return LastName + ", " + FirstName;
+            }
+        }
+
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Enrollment Date")]
