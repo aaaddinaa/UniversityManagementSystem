@@ -4,14 +4,16 @@ using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(UMSContext))]
-    partial class UMSContextModelSnapshot : ModelSnapshot
+    [Migration("20220410070052_DropEnrollment")]
+    partial class DropEnrollment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,27 +55,6 @@ namespace DataAccess.Migrations
                     b.HasIndex("CourseID");
 
                     b.ToTable("CourseTeachers");
-                });
-
-            modelBuilder.Entity("DataAccess.Models.Enrollment", b =>
-                {
-                    b.Property<int>("CourseID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StudentID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Grade")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ID")
-                        .HasColumnType("int");
-
-                    b.HasKey("CourseID", "StudentID");
-
-                    b.HasIndex("StudentID");
-
-                    b.ToTable("Enrollments");
                 });
 
             modelBuilder.Entity("DataAccess.Models.Office", b =>
@@ -158,25 +139,6 @@ namespace DataAccess.Migrations
                     b.Navigation("Teacher");
                 });
 
-            modelBuilder.Entity("DataAccess.Models.Enrollment", b =>
-                {
-                    b.HasOne("DataAccess.Models.Course", "Course")
-                        .WithMany("Enrollments")
-                        .HasForeignKey("CourseID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DataAccess.Models.Student", "Student")
-                        .WithMany("Enrollments")
-                        .HasForeignKey("StudentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Student");
-                });
-
             modelBuilder.Entity("DataAccess.Models.Office", b =>
                 {
                     b.HasOne("DataAccess.Models.Teacher", "Teacher")
@@ -191,13 +153,6 @@ namespace DataAccess.Migrations
             modelBuilder.Entity("DataAccess.Models.Course", b =>
                 {
                     b.Navigation("CourseTeachers");
-
-                    b.Navigation("Enrollments");
-                });
-
-            modelBuilder.Entity("DataAccess.Models.Student", b =>
-                {
-                    b.Navigation("Enrollments");
                 });
 
             modelBuilder.Entity("DataAccess.Models.Teacher", b =>

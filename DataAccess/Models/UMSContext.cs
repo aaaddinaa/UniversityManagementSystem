@@ -27,6 +27,9 @@ namespace DataAccess.Models
             modelBuilder.Entity<CourseTeacher>()
                 .HasKey(tc => new { tc.TeacherID, tc.CourseID });
 
+            modelBuilder.Entity<Enrollment>()
+                .HasKey(cs => new { cs.CourseID, cs.StudentID });
+
             modelBuilder.Entity<Teacher>()
                 .HasOne<Office>(o => o.Office).WithOne(t => t.Teacher)
                 .HasForeignKey<Office>(ot => ot.TeacherID);
