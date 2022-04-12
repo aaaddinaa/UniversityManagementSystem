@@ -1,0 +1,62 @@
+﻿@model IEnumerable<UMS.Models.CourseTeacherView>
+
+@{
+    ViewBag.Title = "CourseTteachers";
+}
+
+<h1>CourseTteachers</h1>
+<p>
+    <a href="@Url.Action("AddOrEdit", "CourseTeacher")" class="btn btn-default"><i class="fa fa-plus"></i>Create new</a>
+</p>
+
+<table class="table table-striped">
+    <thead class="table-healing">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Course.Title)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Teacher.FullName)
+            </th>
+
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.Title)
+            </td> 
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Teacher.FullName)
+            </td>
+
+            <td>
+                <a href="@Url.ActionLink("AddOrEdit", "CourseTeacher", new { id = item.ID })" class="btn btn-default"><i class="fa fa-pencil"></i>Edit</a>
+                <a onClick="Delete(@item.ID)" class="btn btn-default"><i class="fa fa-trash"></i>Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+@section scripts{
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]';
+            if (successMessage != '')
+                alertify.success(successMessage);
+        });
+
+        function Delete(id) {
+            alertify.confirm('Delete this student', 'Are you sure?', function () {
+                window.location.href = '@Url.Action("Delete", "CourseTeacher")/' + id;
+            }, null);
+        }
+    </script>
+}
